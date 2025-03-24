@@ -1,0 +1,482 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../Fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito Sans", serif;
+}
+body .containerAll {
+  height: 100vh;
+}
+body .containerAll .navCon {
+  background-color: #3f8cff;
+  height: 100%;
+  border-radius: 24px;
+}
+@media (min-width: 992px) {
+  body .containerAll .navCon {
+    width: 350px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .navCon {
+    width: 300px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .navCon {
+    width: 200;
+  }
+}
+body .containerAll .navCon .logo {
+  width: 50px;
+}
+body .containerAll .navCon .getStarted {
+  color: #ffffff;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  body .containerAll .navCon .getStarted {
+    font-size: 36px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .navCon .getStarted {
+    font-size: 30px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .navCon .getStarted {
+    font-size: 24px;
+  }
+}
+body .containerAll .navCon .nav-item .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  opacity: 0.5;
+  padding: 0;
+  margin-bottom: 0 !important;
+  border: 0;
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  body .containerAll .navCon .nav-item .nav-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .navCon .nav-item .nav-link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .navCon .nav-item .nav-link {
+    font-size: 12px;
+  }
+}
+body .containerAll .navCon .nav-item .nav-link.active {
+  opacity: 1;
+  background-color: transparent;
+  border: 0;
+}
+body .containerAll .navCon .nav-item .nav-link:hover {
+  border: 0;
+  opacity: 1;
+}
+body .containerAll .navCon .nav-item .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3019607843);
+  border: 2px solid white;
+  opacity: 0.5;
+}
+body .containerAll .navCon .nav-item.done a {
+  opacity: 1;
+  color: #0a1629;
+}
+body .containerAll .tabsCon {
+  height: 100%;
+  overflow-y: auto;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon {
+    width: calc(100% - 350px);
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon {
+    width: calc(100% - 300px);
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon {
+    width: calc(100% - 200px);
+  }
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane {
+    width: 425px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane {
+    width: 300px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane {
+    width: 100%;
+  }
+}
+body .containerAll .tabsCon .tab-pane .step {
+  color: #3f8cff;
+  font-size: 14px;
+  font-weight: 700;
+}
+body .containerAll .tabsCon .tab-pane .title {
+  color: #0a1629;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane .title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane .title {
+    font-size: 19px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane .title {
+    font-size: 16px;
+  }
+}
+body .containerAll .tabsCon .tab-pane form input::-webkit-outer-spin-button,
+body .containerAll .tabsCon .tab-pane form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .containerAll .tabsCon .tab-pane form input[type=number] {
+  -moz-appearance: textfield;
+}
+body .containerAll .tabsCon .tab-pane form label {
+  color: #7d8592;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane form label {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form label {
+    font-size: 12px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form label {
+    font-size: 10px;
+  }
+}
+body .containerAll .tabsCon .tab-pane form .passInputCon input {
+  padding-right: 50px;
+}
+body .containerAll .tabsCon .tab-pane form .passInputCon img {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body .containerAll .tabsCon .tab-pane form .countryCode {
+  box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
+  border-color: #d8e0f0;
+  border-radius: 14px;
+  height: 50px;
+  color: #7d8592;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane form .countryCode {
+    font-size: 14px;
+    width: 75px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form .countryCode {
+    font-size: 12px;
+    width: 70px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form .countryCode {
+    font-size: 10px;
+    width: 65px;
+  }
+}
+body .containerAll .tabsCon .tab-pane form .service {
+  box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
+  border-color: #d8e0f0;
+  border-radius: 14px;
+  height: 50px;
+  color: #7d8592;
+  font-size: 14px;
+  font-weight: 400;
+}
+body .containerAll .tabsCon .tab-pane form input {
+  box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
+  border-color: #d8e0f0;
+  border-radius: 14px;
+  height: 50px;
+  color: #7d8592;
+  font-weight: 400;
+}
+body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
+  color: #7d8592;
+  font-weight: 400;
+}
+body .containerAll .tabsCon .tab-pane form input::placeholder {
+  color: #7d8592;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
+    font-size: 14px;
+  }
+  body .containerAll .tabsCon .tab-pane form input::placeholder {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
+    font-size: 12px;
+  }
+  body .containerAll .tabsCon .tab-pane form input::placeholder {
+    font-size: 12px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
+    font-size: 10px;
+  }
+  body .containerAll .tabsCon .tab-pane form input::placeholder {
+    font-size: 10px;
+  }
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane form input {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form input {
+    font-size: 12px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form input {
+    font-size: 10px;
+  }
+}
+body .containerAll .tabsCon .tab-pane form input.smsCode {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .tab-pane form input.smsCode {
+    width: 60px;
+    height: 50px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form input.smsCode {
+    width: 50px;
+    height: 45px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .tab-pane form input.smsCode {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .containerAll .tabsCon .tab-pane form input:focus {
+  border: 2px solid #3f8cff;
+}
+body .containerAll .tabsCon .smsMessage {
+  background-color: #f4f9fd;
+  border-radius: 14px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+body .containerAll .tabsCon .smsMessage p {
+  color: #3f8cff;
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .smsMessage p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .smsMessage p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .smsMessage p {
+    font-size: 10px;
+  }
+}
+body .containerAll .team-btn {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height: 48px;
+  background-color: white;
+  box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
+  color: #7d8592;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  body .containerAll .team-btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .team-btn {
+    font-size: 12px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .team-btn {
+    font-size: 10px;
+  }
+}
+body .containerAll .team-btn:hover, body .containerAll .team-btn.active {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+body .containerAll .nextBtn {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 2%;
+}
+body .containerAll .nextBtn .line {
+  height: 1px;
+  background-color: #d8e0f0;
+}
+body .containerAll .nextBtn button {
+  width: 145px;
+  height: 48px;
+}
+@media (min-width: 992px) {
+  body .containerAll .nextBtn button {
+    width: 145px;
+    height: 48px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .nextBtn button {
+    width: 130px;
+    height: 40px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .nextBtn button {
+    width: 90px;
+    height: 40px;
+  }
+}
+body .containerAll .nextBtn .next {
+  box-shadow: 0px 6px 12px 0px rgba(63, 140, 255, 0.262745098);
+  background-color: #3f8cff;
+  border-radius: 14px;
+  border: 0;
+  color: white;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  body .containerAll .nextBtn .next {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .nextBtn .next {
+    font-size: 14px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .nextBtn .next {
+    font-size: 12px;
+  }
+}
+body .containerAll .prevBtn {
+  background-color: transparent;
+  border-radius: 14px;
+  border: 0;
+  color: #3f8cff;
+  font-size: 16px;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  body .containerAll .prevBtn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .prevBtn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .prevBtn {
+    font-size: 10px;
+  }
+}
+body .success {
+  height: 100vh;
+}
+body .success .startBtn {
+  box-shadow: 0px 6px 12px 0px rgba(63, 140, 255, 0.262745098);
+  background-color: #3f8cff;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 14px;
+  border: 0;
+  width: 145px;
+  height: 48px;
+}
+body .success .successMsg {
+  color: #0a1629;
+  font-size: 22px;
+  font-weight: 700;
+}/*# sourceMappingURL=Index.css.map */

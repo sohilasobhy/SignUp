@@ -1,0 +1,362 @@
+@import "_Fonts";
+@import "_Mixins";
+@import "_Variables";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito Sans", serif;
+  .containerAll {
+    height: 100vh;
+    .navCon {
+      @media (min-width: 992px) {
+        width: 350px;
+      }
+      @media (max-width: 992px) and (min-width: 786px) {
+        width: 300px;
+      }
+      @media (max-width: 786px) {
+        width: 200;
+      }
+      background-color: $primary-color;
+      height: 100%;
+      border-radius: 24px;
+      .logo {
+        width: 50px;
+      }
+      .getStarted {
+        @include text-style(#ffffff, null, 700);
+        @media (min-width: 992px) {
+          font-size: 36px;
+        }
+        @media (max-width: 992px) and (min-width: 786px) {
+          font-size: 30px;
+        }
+        @media (max-width: 786px) {
+          font-size: 24px;
+        }
+      }
+      .nav-item {
+        .nav-link {
+          @include text-style(#ffffff !important, null, 600);
+          @media (min-width: 992px) {
+            font-size: 18px;
+          }
+          @media (max-width: 992px) and (min-width: 786px) {
+            font-size: 16px;
+          }
+          @media (max-width: 786px) {
+            font-size: 12px;
+          }
+          opacity: 0.5;
+          padding: 0;
+          margin-bottom: 0 !important;
+          border: 0;
+          position: relative;
+          padding-left: 40px;
+          display: flex;
+          align-items: center;
+          &.active {
+            opacity: 1;
+            background-color: transparent;
+            border: 0;
+          }
+          &:hover {
+            border: 0;
+            opacity: 1;
+          }
+        }
+        &.active {
+          a {
+          }
+        }
+        .circle {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          position: absolute;
+          background-color: #ffffff4d;
+          border: 2px solid white;
+          opacity: 0.5;
+        }
+        &.done {
+          a {
+            opacity: 1;
+            color: #0a1629;
+          }
+        }
+      }
+    }
+    .tabsCon {
+      @media (min-width: 992px) {
+        width: calc(100% - 350px);
+      }
+      @media (max-width: 992px) and (min-width: 786px) {
+        width: calc(100% - 300px);
+      }
+      @media (max-width: 786px) {
+        width: calc(100% - 200px);
+      }
+      height: 100%;
+      overflow-y: auto;
+      .tab-pane {
+        @media (min-width: 992px) {
+          width: 425px;
+        }
+        @media (max-width: 992px) and (min-width: 786px) {
+          width: 300px;
+        }
+        @media (max-width: 786px) {
+          width: 100%;
+        }
+        .step {
+          @include text-style($primary-color, 14px, 700);
+        }
+        .title {
+          @include text-style(#0a1629, null, 700);
+          @media (min-width: 992px) {
+            font-size: 22px;
+          }
+          @media (max-width: 992px) and (min-width: 786px) {
+            font-size: 19px;
+          }
+          @media (max-width: 786px) {
+            font-size: 16px;
+          }
+        }
+        form {
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          input[type="number"] {
+            -moz-appearance: textfield;
+          }
+          label {
+            @include text-style($prim-text-color, null, 700);
+            @media (min-width: 992px) {
+              font-size: 14px;
+            }
+            @media (max-width: 992px) and (min-width: 786px) {
+              font-size: 12px;
+            }
+            @media (max-width: 786px) {
+              font-size: 10px;
+            }
+          }
+          .passInputCon {
+            input {
+              padding-right: 50px;
+            }
+            img {
+              @include position(absolute, 50%, 4%, null, null);
+              transform: translateY(-50%);
+              cursor: pointer;
+            }
+          }
+          .countryCode {
+            box-shadow: 0px 1px 2px 0px #b8c8e039;
+            border-color: $border-color;
+            border-radius: 14px;
+            height: 50px;
+            @include text-style($prim-text-color, null, 400);
+            @media (min-width: 992px) {
+              font-size: 14px;
+              width: 75px;
+            }
+            @media (max-width: 992px) and (min-width: 786px) {
+              font-size: 12px;
+              width: 70px;
+            }
+            @media (max-width: 786px) {
+              font-size: 10px;
+              width: 65px;
+            }
+          }
+          .service {
+            box-shadow: 0px 1px 2px 0px #b8c8e039;
+            border-color: $border-color;
+            border-radius: 14px;
+            height: 50px;
+            @include text-style($prim-text-color, 14px, 400);
+          }
+          input {
+            box-shadow: 0px 1px 2px 0px #b8c8e039;
+            border-color: $border-color;
+            border-radius: 14px;
+            height: 50px;
+            @include text-style($prim-text-color, null, 400);
+            &::placeholder {
+              @include text-style($prim-text-color, null, 400);
+              @media (min-width: 992px) {
+                font-size: 14px;
+              }
+              @media (max-width: 992px) and (min-width: 786px) {
+                font-size: 12px;
+              }
+              @media (max-width: 786px) {
+                font-size: 10px;
+              }
+            }
+            @media (min-width: 992px) {
+              font-size: 14px;
+            }
+            @media (max-width: 992px) and (min-width: 786px) {
+              font-size: 12px;
+            }
+            @media (max-width: 786px) {
+              font-size: 10px;
+            }
+            &.smsCode {
+              text-align: center;
+              @media (min-width: 992px) {
+                width: 60px;
+                height: 50px;
+              }
+              @media (max-width: 992px) and (min-width: 786px) {
+                width: 50px;
+                height: 45px;
+              }
+              @media (max-width: 786px) {
+                width: 40px;
+                height: 40px;
+              }
+            }
+            &:focus {
+              border: 2px solid $primary-color;
+            }
+          }
+        }
+      }
+      .smsMessage {
+        background-color: #f4f9fd;
+        border-radius: 14px;
+        width: fit-content;
+        margin: auto;
+        p {
+          @include text-style($primary-color, null, 600);
+          @media (min-width: 992px) {
+            font-size: 14px;
+          }
+          @media (max-width: 992px) and (min-width: 786px) {
+            font-size: 12px;
+          }
+          @media (max-width: 786px) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .team-btn {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      height: 48px;
+      background-color: white;
+      box-shadow: 0px 1px 2px 0px #b8c8e039;
+      @include text-style($prim-text-color, null, 400);
+      @media (min-width: 992px) {
+        font-size: 14px;
+      }
+      @media (max-width: 992px) and (min-width: 786px) {
+        font-size: 12px;
+      }
+      @media (max-width: 786px) {
+        font-size: 10px;
+      }
+      &:hover,
+      &.active {
+        background-color: #0d6efd;
+        color: white;
+        border-color: #0d6efd;
+      }
+    }
+    .nextBtn {
+      width: 100%;
+      @include position(absolute, null, 0, 2%, null);
+      .line {
+        height: 1px;
+        background-color: $border-color;
+      }
+      button {
+        width: 145px;
+        height: 48px;
+        @media (min-width: 992px) {
+          width: 145px;
+          height: 48px;
+        }
+        @media (max-width: 992px) and (min-width: 786px) {
+          width: 130px;
+          height: 40px;
+        }
+        @media (max-width: 786px) {
+          width: 90px;
+          height: 40px;
+        }
+      }
+      .next {
+        box-shadow: 0px 6px 12px 0px #3f8cff43;
+        background-color: $primary-color;
+        border-radius: 14px;
+        border: 0;
+        @include text-style(white, null, 700);
+        @media (min-width: 992px) {
+          font-size: 16px;
+        }
+        @media (max-width: 992px) and (min-width: 786px) {
+          font-size: 14px;
+        }
+        @media (max-width: 786px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .prevBtn {
+      background-color: transparent;
+      border-radius: 14px;
+      border: 0;
+      @include text-style($primary-color, 16px, 700);
+      @media (min-width: 992px) {
+        font-size: 16px;
+      }
+      @media (max-width: 992px) and (min-width: 786px) {
+        font-size: 14px;
+      }
+      @media (max-width: 786px) {
+        font-size: 10px;
+      }
+    }
+  }
+  .success {
+    height: 100vh;
+    .startBtn {
+      box-shadow: 0px 6px 12px 0px #3f8cff43;
+      background-color: $primary-color;
+      @include text-style(white, 16px, 700);
+      border-radius: 14px;
+      border: 0;
+      width: 145px;
+      height: 48px;
+    }
+    .successMsg {
+      @include text-style(#0a1629, 22px, 700);
+    }
+  }
+}
