@@ -2,6 +2,37 @@
   font-family: "Nunito Sans";
   src: url("../Fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
 }
+@media (min-width: 992px) {
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep1 input::-moz-placeholder {
+    font-size: 14px;
+  }
+  body .containerAll .team-btn label, body .containerAll .tabsCon .smsMessage p, body .containerAll .tabsCon .paneCon .formStep4 .teamNumber, body .containerAll .tabsCon .paneCon .formStep4 .inputCon input,
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon select, body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::placeholder,
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon label, body .containerAll .tabsCon .paneCon .formStep1 input, body .containerAll .tabsCon .paneCon .formStep1 input::placeholder, body .containerAll .tabsCon .paneCon .formStep1 .countryCode, body .containerAll .tabsCon .paneCon .formStep1 label {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) and (min-width: 786px) {
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep1 input::-moz-placeholder {
+    font-size: 12px;
+  }
+  body .containerAll .team-btn label, body .containerAll .tabsCon .smsMessage p, body .containerAll .tabsCon .paneCon .formStep4 .teamNumber, body .containerAll .tabsCon .paneCon .formStep4 .inputCon input,
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon select, body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::placeholder,
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon label, body .containerAll .tabsCon .paneCon .formStep1 input, body .containerAll .tabsCon .paneCon .formStep1 input::placeholder, body .containerAll .tabsCon .paneCon .formStep1 .countryCode, body .containerAll .tabsCon .paneCon .formStep1 label {
+    font-size: 12px;
+  }
+}
+@media (max-width: 786px) {
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep1 input::-moz-placeholder {
+    font-size: 10px;
+  }
+  body .containerAll .team-btn label, body .containerAll .tabsCon .smsMessage p, body .containerAll .tabsCon .paneCon .formStep4 .teamNumber, body .containerAll .tabsCon .paneCon .formStep4 .inputCon input,
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon select, body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::placeholder,
+  body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon label, body .containerAll .tabsCon .paneCon .formStep1 input, body .containerAll .tabsCon .paneCon .formStep1 input::placeholder, body .containerAll .tabsCon .paneCon .formStep1 .countryCode, body .containerAll .tabsCon .paneCon .formStep1 label {
+    font-size: 10px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -27,6 +58,7 @@ body {
 }
 body .containerAll {
   height: 100vh;
+  background-color: #f4f9fd;
 }
 body .containerAll .navCon {
   background-color: #3f8cff;
@@ -70,10 +102,12 @@ body .containerAll .navCon .getStarted {
     font-size: 24px;
   }
 }
+body .containerAll .navCon .nav-item {
+  opacity: 0.5;
+}
 body .containerAll .navCon .nav-item .nav-link {
   color: #ffffff !important;
   font-weight: 600;
-  opacity: 0.5;
   padding: 0;
   margin-bottom: 0 !important;
   border: 0;
@@ -113,13 +147,32 @@ body .containerAll .navCon .nav-item .circle {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3019607843);
   border: 2px solid white;
-  opacity: 0.5;
+  background-color: transparent;
 }
-body .containerAll .navCon .nav-item.done a {
+body .containerAll .navCon .nav-item .circle img {
+  display: none;
+}
+body .containerAll .navCon .nav-item .line {
+  width: 2px;
+  height: 25px;
+  background: white;
+  margin-left: 10px;
+}
+body .containerAll .navCon .nav-item:has(.active) {
   opacity: 1;
-  color: #0a1629;
+}
+body .containerAll .navCon .nav-item.done {
+  opacity: 1;
+}
+body .containerAll .navCon .nav-item.done .circle {
+  background-color: white !important;
+}
+body .containerAll .navCon .nav-item.done .circle img {
+  display: block !important;
 }
 body .containerAll .tabsCon {
+  background-color: white;
+  border-radius: 24px;
   height: 100%;
   overflow-y: auto;
 }
@@ -138,83 +191,71 @@ body .containerAll .tabsCon {
     width: calc(100% - 200px);
   }
 }
+body .containerAll .tabsCon .paneCon {
+  height: 88%;
+}
 @media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane {
+  body .containerAll .tabsCon .paneCon {
     width: 425px;
   }
 }
 @media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane {
+  body .containerAll .tabsCon .paneCon {
     width: 300px;
   }
 }
 @media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane {
+  body .containerAll .tabsCon .paneCon {
     width: 100%;
   }
 }
-body .containerAll .tabsCon .tab-pane .step {
+body .containerAll .tabsCon .paneCon .step {
   color: #3f8cff;
   font-size: 14px;
   font-weight: 700;
 }
-body .containerAll .tabsCon .tab-pane .title {
+body .containerAll .tabsCon .paneCon .title {
   color: #0a1629;
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane .title {
+  body .containerAll .tabsCon .paneCon .title {
     font-size: 22px;
   }
 }
 @media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane .title {
+  body .containerAll .tabsCon .paneCon .title {
     font-size: 19px;
   }
 }
 @media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane .title {
+  body .containerAll .tabsCon .paneCon .title {
     font-size: 16px;
   }
 }
-body .containerAll .tabsCon .tab-pane form input::-webkit-outer-spin-button,
-body .containerAll .tabsCon .tab-pane form input::-webkit-inner-spin-button {
+body .containerAll .tabsCon .paneCon .formStep1 input::-webkit-outer-spin-button,
+body .containerAll .tabsCon .paneCon .formStep1 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-body .containerAll .tabsCon .tab-pane form input[type=number] {
+body .containerAll .tabsCon .paneCon .formStep1 input[type=number] {
   -moz-appearance: textfield;
 }
-body .containerAll .tabsCon .tab-pane form label {
+body .containerAll .tabsCon .paneCon .formStep1 label {
   color: #7d8592;
   font-weight: 700;
 }
-@media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane form label {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form label {
-    font-size: 12px;
-  }
-}
-@media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form label {
-    font-size: 10px;
-  }
-}
-body .containerAll .tabsCon .tab-pane form .passInputCon input {
+body .containerAll .tabsCon .paneCon .formStep1 .passInputCon input {
   padding-right: 50px;
 }
-body .containerAll .tabsCon .tab-pane form .passInputCon img {
+body .containerAll .tabsCon .paneCon .formStep1 .passInputCon img {
   position: absolute;
   top: 50%;
   right: 4%;
   transform: translateY(-50%);
   cursor: pointer;
 }
-body .containerAll .tabsCon .tab-pane form .countryCode {
+body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
   box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
   border-color: #d8e0f0;
   border-radius: 14px;
@@ -223,24 +264,21 @@ body .containerAll .tabsCon .tab-pane form .countryCode {
   font-weight: 400;
 }
 @media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane form .countryCode {
-    font-size: 14px;
+  body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
     width: 75px;
   }
 }
 @media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form .countryCode {
-    font-size: 12px;
+  body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
     width: 70px;
   }
 }
 @media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form .countryCode {
-    font-size: 10px;
+  body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
     width: 65px;
   }
 }
-body .containerAll .tabsCon .tab-pane form .service {
+body .containerAll .tabsCon .paneCon .formStep1 .service {
   box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
   border-color: #d8e0f0;
   border-radius: 14px;
@@ -249,7 +287,7 @@ body .containerAll .tabsCon .tab-pane form .service {
   font-size: 14px;
   font-weight: 400;
 }
-body .containerAll .tabsCon .tab-pane form input {
+body .containerAll .tabsCon .paneCon .formStep1 input {
   box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
   border-color: #d8e0f0;
   border-radius: 14px;
@@ -257,76 +295,74 @@ body .containerAll .tabsCon .tab-pane form input {
   color: #7d8592;
   font-weight: 400;
 }
-body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
+body .containerAll .tabsCon .paneCon .formStep1 input::-moz-placeholder {
   color: #7d8592;
   font-weight: 400;
 }
-body .containerAll .tabsCon .tab-pane form input::placeholder {
+body .containerAll .tabsCon .paneCon .formStep1 input::placeholder {
   color: #7d8592;
   font-weight: 400;
 }
-@media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
-    font-size: 14px;
-  }
-  body .containerAll .tabsCon .tab-pane form input::placeholder {
-    font-size: 14px;
-  }
+body .containerAll .tabsCon .paneCon .formStep1 input:focus {
+  border: 2px solid #3f8cff;
 }
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
-    font-size: 12px;
-  }
-  body .containerAll .tabsCon .tab-pane form input::placeholder {
-    font-size: 12px;
-  }
-}
-@media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form input::-moz-placeholder {
-    font-size: 10px;
-  }
-  body .containerAll .tabsCon .tab-pane form input::placeholder {
-    font-size: 10px;
-  }
-}
-@media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane form input {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form input {
-    font-size: 12px;
-  }
-}
-@media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form input {
-    font-size: 10px;
-  }
-}
-body .containerAll .tabsCon .tab-pane form input.smsCode {
+body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
   text-align: center;
 }
 @media (min-width: 992px) {
-  body .containerAll .tabsCon .tab-pane form input.smsCode {
+  body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
     width: 60px;
     height: 50px;
   }
 }
 @media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form input.smsCode {
+  body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
     width: 50px;
     height: 45px;
   }
 }
 @media (max-width: 786px) {
-  body .containerAll .tabsCon .tab-pane form input.smsCode {
+  body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
     width: 40px;
     height: 40px;
   }
 }
-body .containerAll .tabsCon .tab-pane form input:focus {
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon label {
+  color: #7d8592;
+  font-weight: 700;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon input,
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon select {
+  box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
+  border-color: #d8e0f0;
+  border-radius: 14px;
+  height: 50px;
+  color: #7d8592;
+  font-weight: 400;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::-moz-placeholder {
+  color: #7d8592;
+  font-weight: 400;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::placeholder,
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::placeholder {
+  color: #7d8592;
+  font-weight: 400;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon input:focus,
+body .containerAll .tabsCon .paneCon .formStep4 .inputCon select:focus {
   border: 2px solid #3f8cff;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .teamNumber {
+  color: #7d8592;
+  font-weight: 700;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .teamMembers input {
+  display: none;
+}
+body .containerAll .tabsCon .paneCon .formStep4 .teamMembers .oneTeam {
+  text-align: center;
+  background-color: #3f8cff;
 }
 body .containerAll .tabsCon .smsMessage {
   background-color: #f4f9fd;
@@ -339,106 +375,72 @@ body .containerAll .tabsCon .smsMessage p {
   color: #3f8cff;
   font-weight: 600;
 }
-@media (min-width: 992px) {
-  body .containerAll .tabsCon .smsMessage p {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .tabsCon .smsMessage p {
-    font-size: 12px;
-  }
-}
-@media (max-width: 786px) {
-  body .containerAll .tabsCon .smsMessage p {
-    font-size: 10px;
-  }
-}
 body .containerAll .team-btn {
   border: 1px solid #ddd;
   border-radius: 8px;
   height: 48px;
   background-color: white;
   box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .containerAll .team-btn label {
   color: #7d8592;
   font-weight: 400;
 }
-@media (min-width: 992px) {
-  body .containerAll .team-btn {
-    font-size: 14px;
-  }
+body .containerAll .team-btn:has(input:checked) {
+  background-color: #007bff;
+  border-color: #007bff;
 }
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .team-btn {
-    font-size: 12px;
-  }
-}
-@media (max-width: 786px) {
-  body .containerAll .team-btn {
-    font-size: 10px;
-  }
-}
-body .containerAll .team-btn:hover, body .containerAll .team-btn.active {
-  background-color: #0d6efd;
+body .containerAll .team-btn input:checked + label {
+  font-weight: bold;
   color: white;
+}
+body .containerAll .team-btn:hover {
+  background-color: #0d6efd;
   border-color: #0d6efd;
+}
+body .containerAll .team-btn:hover label {
+  color: white;
 }
 body .containerAll .nextBtn {
   width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 2%;
+  border-top: 1px solid #d8e0f0;
+  cursor: pointer;
 }
-body .containerAll .nextBtn .line {
-  height: 1px;
-  background-color: #d8e0f0;
-}
-body .containerAll .nextBtn button {
-  width: 145px;
-  height: 48px;
-}
-@media (min-width: 992px) {
-  body .containerAll .nextBtn button {
-    width: 145px;
-    height: 48px;
-  }
-}
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .nextBtn button {
-    width: 130px;
-    height: 40px;
-  }
-}
-@media (max-width: 786px) {
-  body .containerAll .nextBtn button {
-    width: 90px;
-    height: 40px;
-  }
+body .containerAll .nextBtn .btnCon {
+  padding: 0.7rem 1.5rem;
 }
 body .containerAll .nextBtn .next {
   box-shadow: 0px 6px 12px 0px rgba(63, 140, 255, 0.262745098);
-  background-color: #3f8cff;
   border-radius: 14px;
+  background-color: #3f8cff;
+}
+body .containerAll .nextBtn .next button {
   border: 0;
   color: white;
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  body .containerAll .nextBtn .next {
+  body .containerAll .nextBtn .next button {
     font-size: 16px;
   }
 }
 @media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .nextBtn .next {
+  body .containerAll .nextBtn .next button {
     font-size: 14px;
   }
 }
 @media (max-width: 786px) {
-  body .containerAll .nextBtn .next {
+  body .containerAll .nextBtn .next button {
     font-size: 12px;
   }
 }
 body .containerAll .prevBtn {
+  cursor: pointer;
+}
+body .containerAll .prevBtn button {
   background-color: transparent;
   border-radius: 14px;
   border: 0;
@@ -447,17 +449,17 @@ body .containerAll .prevBtn {
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  body .containerAll .prevBtn {
+  body .containerAll .prevBtn button {
     font-size: 16px;
   }
 }
 @media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .prevBtn {
+  body .containerAll .prevBtn button {
     font-size: 14px;
   }
 }
 @media (max-width: 786px) {
-  body .containerAll .prevBtn {
+  body .containerAll .prevBtn button {
     font-size: 10px;
   }
 }

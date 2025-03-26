@@ -1,6 +1,19 @@
 @import "_Fonts";
 @import "_Mixins";
 @import "_Variables";
+
+%media-text {
+  @media (min-width: 992px) {
+    font-size: 14px;
+  }
+  @media (max-width: 992px) and (min-width: 786px) {
+    font-size: 12px;
+  }
+  @media (max-width: 786px) {
+    font-size: 10px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +38,7 @@ body {
   font-family: "Nunito Sans", serif;
   .containerAll {
     height: 100vh;
+    background-color: #f4f9fd;
     .navCon {
       @media (min-width: 992px) {
         width: 350px;
@@ -54,6 +68,7 @@ body {
         }
       }
       .nav-item {
+        opacity: 0.5;
         .nav-link {
           @include text-style(#ffffff !important, null, 600);
           @media (min-width: 992px) {
@@ -65,7 +80,6 @@ body {
           @media (max-width: 786px) {
             font-size: 12px;
           }
-          opacity: 0.5;
           padding: 0;
           margin-bottom: 0 !important;
           border: 0;
@@ -83,10 +97,6 @@ body {
             opacity: 1;
           }
         }
-        &.active {
-          a {
-          }
-        }
         .circle {
           width: 25px;
           height: 25px;
@@ -94,17 +104,34 @@ body {
           position: absolute;
           background-color: #ffffff4d;
           border: 2px solid white;
-          opacity: 0.5;
+          background-color: transparent;
+          img {
+            display: none;
+          }
+        }
+        .line {
+          width: 2px;
+          height: 25px;
+          background: white;
+          margin-left: 10px;
+        }
+        &:has(.active) {
+          opacity: 1;
         }
         &.done {
-          a {
-            opacity: 1;
-            color: #0a1629;
+          opacity: 1;
+          .circle {
+            background-color: white !important;
+            img {
+              display: block !important;
+            }
           }
         }
       }
     }
     .tabsCon {
+      background-color: white;
+      border-radius: 24px;
       @media (min-width: 992px) {
         width: calc(100% - 350px);
       }
@@ -116,7 +143,8 @@ body {
       }
       height: 100%;
       overflow-y: auto;
-      .tab-pane {
+      .paneCon {
+        height: 88%;
         @media (min-width: 992px) {
           width: 425px;
         }
@@ -141,7 +169,7 @@ body {
             font-size: 16px;
           }
         }
-        form {
+        .formStep1 {
           input::-webkit-outer-spin-button,
           input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -152,15 +180,7 @@ body {
           }
           label {
             @include text-style($prim-text-color, null, 700);
-            @media (min-width: 992px) {
-              font-size: 14px;
-            }
-            @media (max-width: 992px) and (min-width: 786px) {
-              font-size: 12px;
-            }
-            @media (max-width: 786px) {
-              font-size: 10px;
-            }
+            @extend %media-text;
           }
           .passInputCon {
             input {
@@ -178,16 +198,14 @@ body {
             border-radius: 14px;
             height: 50px;
             @include text-style($prim-text-color, null, 400);
+            @extend %media-text;
             @media (min-width: 992px) {
-              font-size: 14px;
               width: 75px;
             }
             @media (max-width: 992px) and (min-width: 786px) {
-              font-size: 12px;
               width: 70px;
             }
             @media (max-width: 786px) {
-              font-size: 10px;
               width: 65px;
             }
           }
@@ -206,24 +224,11 @@ body {
             @include text-style($prim-text-color, null, 400);
             &::placeholder {
               @include text-style($prim-text-color, null, 400);
-              @media (min-width: 992px) {
-                font-size: 14px;
-              }
-              @media (max-width: 992px) and (min-width: 786px) {
-                font-size: 12px;
-              }
-              @media (max-width: 786px) {
-                font-size: 10px;
-              }
+              @extend %media-text;
             }
-            @media (min-width: 992px) {
-              font-size: 14px;
-            }
-            @media (max-width: 992px) and (min-width: 786px) {
-              font-size: 12px;
-            }
-            @media (max-width: 786px) {
-              font-size: 10px;
+            @extend %media-text;
+            &:focus {
+              border: 2px solid $primary-color;
             }
             &.smsCode {
               text-align: center;
@@ -240,8 +245,42 @@ body {
                 height: 40px;
               }
             }
-            &:focus {
-              border: 2px solid $primary-color;
+          }
+        }
+        .formStep4 {
+          .inputCon {
+            label {
+              @include text-style($prim-text-color, null, 700);
+              @extend %media-text;
+            }
+            input,
+            select {
+              box-shadow: 0px 1px 2px 0px #b8c8e039;
+              border-color: $border-color;
+              border-radius: 14px;
+              height: 50px;
+              @include text-style($prim-text-color, null, 400);
+              &::placeholder {
+                @include text-style($prim-text-color, null, 400);
+                @extend %media-text;
+              }
+              @extend %media-text;
+              &:focus {
+                border: 2px solid $primary-color;
+              }
+            }
+          }
+          .teamNumber {
+            @include text-style($prim-text-color, null, 700);
+            @extend %media-text;
+          }
+          .teamMembers {
+            input {
+              display: none;
+            }
+            .oneTeam {
+              text-align: center;
+              background-color: $primary-color;
             }
           }
         }
@@ -253,15 +292,7 @@ body {
         margin: auto;
         p {
           @include text-style($primary-color, null, 600);
-          @media (min-width: 992px) {
-            font-size: 14px;
-          }
-          @media (max-width: 992px) and (min-width: 786px) {
-            font-size: 12px;
-          }
-          @media (max-width: 786px) {
-            font-size: 10px;
-          }
+          @extend %media-text;
         }
       }
     }
@@ -271,52 +302,62 @@ body {
       height: 48px;
       background-color: white;
       box-shadow: 0px 1px 2px 0px #b8c8e039;
-      @include text-style($prim-text-color, null, 400);
-      @media (min-width: 992px) {
-        font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      label {
+        @include text-style($prim-text-color, null, 400);
+        @extend %media-text;
       }
-      @media (max-width: 992px) and (min-width: 786px) {
-        font-size: 12px;
+      &:has(input:checked) {
+        background-color: #007bff;
+        border-color: #007bff;
       }
-      @media (max-width: 786px) {
-        font-size: 10px;
-      }
-      &:hover,
-      &.active {
-        background-color: #0d6efd;
+      input:checked + label {
+        font-weight: bold;
         color: white;
+      }
+      &:hover {
+        background-color: #0d6efd;
         border-color: #0d6efd;
+        label {
+          color: white;
+        }
       }
     }
     .nextBtn {
       width: 100%;
-      @include position(absolute, null, 0, 2%, null);
-      .line {
-        height: 1px;
-        background-color: $border-color;
-      }
-      button {
-        width: 145px;
-        height: 48px;
-        @media (min-width: 992px) {
-          width: 145px;
-          height: 48px;
-        }
-        @media (max-width: 992px) and (min-width: 786px) {
-          width: 130px;
-          height: 40px;
-        }
-        @media (max-width: 786px) {
-          width: 90px;
-          height: 40px;
-        }
+      border-top: 1px solid $border-color;
+      cursor: pointer;
+      .btnCon {
+        padding: 0.7rem 1.5rem;
       }
       .next {
         box-shadow: 0px 6px 12px 0px #3f8cff43;
+        border-radius: 14px;
         background-color: $primary-color;
+        button {
+          border: 0;
+          @include text-style(white, null, 700);
+          @media (min-width: 992px) {
+            font-size: 16px;
+          }
+          @media (max-width: 992px) and (min-width: 786px) {
+            font-size: 14px;
+          }
+          @media (max-width: 786px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .prevBtn {
+      cursor: pointer;
+      button {
+        background-color: transparent;
         border-radius: 14px;
         border: 0;
-        @include text-style(white, null, 700);
+        @include text-style($primary-color, 16px, 700);
         @media (min-width: 992px) {
           font-size: 16px;
         }
@@ -324,23 +365,8 @@ body {
           font-size: 14px;
         }
         @media (max-width: 786px) {
-          font-size: 12px;
+          font-size: 10px;
         }
-      }
-    }
-    .prevBtn {
-      background-color: transparent;
-      border-radius: 14px;
-      border: 0;
-      @include text-style($primary-color, 16px, 700);
-      @media (min-width: 992px) {
-        font-size: 16px;
-      }
-      @media (max-width: 992px) and (min-width: 786px) {
-        font-size: 14px;
-      }
-      @media (max-width: 786px) {
-        font-size: 10px;
       }
     }
   }
