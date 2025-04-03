@@ -15,403 +15,423 @@
     <title>Sign up</title>
   </head>
   <body>
-    <div class="d-flex gap-4 p-3 containerAll">
-      <div class="navCon d-flex flex-column p-lg-5 p-2">
-        <img src="assets/Images/white.svg" alt="logo" class="logo" />
-        <p class="getStarted mt-5">Get started</p>
-        <ul class="nav nav-tabs flex-column border-bottom-0 mt-5 gap-1">
-          <li class="nav-item" id="step1">
-            <div
-              class="circle d-flex justify-content-center align-items-center"
-            >
-              <img src="assets/Images/done.svg" alt="done" />
-            </div>
-            <a class="nav-link active" data-bs-toggle="tab" href="#phone">
-              Valid your phone
-            </a>
-            <div class="line"></div>
-          </li>
-          <li class="nav-item" id="step2">
-            <div
-              class="circle d-flex justify-content-center align-items-center"
-            >
-              <img src="assets/Images/done.svg" alt="done" />
-            </div>
-            <a class="nav-link" data-bs-toggle="tab" href="#yourself"
-              >Tell about yourself</a
-            >
-            <div class="line"></div>
-          </li>
-          <li class="nav-item" id="step3">
-            <div
-              class="circle d-flex justify-content-center align-items-center"
-            >
-              <img src="assets/Images/done.svg" alt="done" />
-            </div>
-            <a class="nav-link" data-bs-toggle="tab" href="#company"
-              >Tell about your company</a
-            >
-            <div class="line"></div>
-          </li>
-          <li class="nav-item" id="step4">
-            <div
-              class="circle d-flex justify-content-center align-items-center"
-            >
-              <img src="assets/Images/done.svg" alt="done" />
-            </div>
-            <a class="nav-link" data-bs-toggle="tab" href="#teamMember"
-              >Invite Team Members</a
-            >
-          </li>
+    <div class="d-flex flex-md-row flex-column gap-4 p-3 containerAll">
+      <div class="navCon d-flex flex-column p-lg-5 p-4">
+        <div
+          class="d-flex flex-md-column align-items-md-start align-items-center gap-md-0 gap-4"
+        >
+          <img src="assets/Images/white.svg" alt="logo" class="logo" />
+          <p class="getStarted mt-md-5">Get started</p>
+        </div>
+        <ul
+          class="nav nav-tabs border-bottom-0 mt-md-5 mt-3 gap-md-0 gap-3 w-100 justify-content-center flex-nowrap"
+        >
+          <div class="d-md-block d-flex navItemCon gap-3 flex-wrap">
+            <li class="nav-item" id="step1">
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <img src="assets/Images/done.svg" alt="done" />
+              </div>
+              <a
+                class="nav-link afterLine active"
+                data-bs-toggle="tab"
+                href="#phone"
+              >
+                Valid your phone
+              </a>
+            </li>
+            <li class="nav-item" id="step2">
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <img src="assets/Images/done.svg" alt="done" />
+              </div>
+              <a
+                class="nav-link afterLine"
+                data-bs-toggle="tab"
+                href="#yourself"
+                >Tell about yourself</a
+              >
+            </li>
+          </div>
+          <div class="d-md-block d-flex navItemCon gap-3 flex-wrap">
+            <li class="nav-item" id="step3">
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <img src="assets/Images/done.svg" alt="done" />
+              </div>
+              <a class="nav-link afterLine" data-bs-toggle="tab" href="#company"
+                >Tell about your company</a
+              >
+            </li>
+            <li class="nav-item" id="step4">
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <img src="assets/Images/done.svg" alt="done" />
+              </div>
+              <a class="nav-link" data-bs-toggle="tab" href="#teamMember"
+                >Invite Team Members</a
+              >
+            </li>
+          </div>
         </ul>
       </div>
       <div class="tabsCon">
         <div class="tab-content p-lg-3 p-2 h-100 position-relative">
           <div class="tab-pane fade show active m-auto h-100" id="phone">
-            <div
-              class="d-flex flex-column align-items-center container paneCon"
-            >
-              <div class="step">Step 1/4</div>
-              <p class="title mt-2">Valid your phone</p>
-              <form class="mt-3 w-100 formStep1">
-                <div class="mb-3">
-                  <label for="phoneNumber" class="form-label"
-                    >Mobile Number</label
-                  >
-                  <div class="d-flex gap-3">
-                    <select class="countryCode form-select">
-                      <option data-countryCode="US" value="1" selected>
-                        + 1
-                      </option>
-                      <option data-countryCode="GB" value="44">+ 44</option>
-                      <optgroup label="Other countries">
-                        <option data-countryCode="DZ" value="213">+ 213</option>
-                      </optgroup>
-                    </select>
-                    <input
-                      type="number"
-                      class="form-control phoneNumber"
-                      id="phoneNumber"
-                      aria-describedby="phoneNumber"
-                      placeholder="345 567-23-56"
-                    />
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="smsCode1" class="form-label">Code from SMS</label>
-                  <div class="d-flex gap-3">
-                    <input
-                      type="number"
-                      class="form-control smsCode"
-                      id="smsCode1"
-                      placeholder="1"
-                    />
-                    <input
-                      type="number"
-                      class="form-control smsCode"
-                      id="smsCode2"
-                      placeholder="2"
-                    />
-                    <input
-                      type="number"
-                      class="form-control smsCode"
-                      id="smsCode3"
-                      placeholder="3"
-                    />
-                    <input
-                      type="number"
-                      class="form-control smsCode"
-                      id="smsCode4"
-                      placeholder="4"
-                    />
-                  </div>
-                </div>
-                <div class="smsMessage p-4 d-flex gap-3 mb-3">
-                  <img src="assets/Images/info.svg" alt="info" />
-                  <p>
-                    SMS was sent to your number +1 345 673-56-67 <br />
-                    It will be valid for 01:25
-                  </p>
-                </div>
-                <div class="mb-3">
-                  <label for="emailInput" class="form-label"
-                    >Email Address</label
-                  >
-                  <div>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="emailInput"
-                      placeholder="youremail@gmail.com"
-                    />
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="passwordInput" class="form-label"
-                    >Create Password</label
-                  >
-                  <div class="position-relative passInputCon">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="passwordInput"
-                      placeholder="••••••••"
-                    />
-                    <img
-                      src="assets/Images/viewpassword.svg"
-                      alt="view password"
-                      onclick="changeType()"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="nextBtn mt-3 d-flex flex-column">
+            <div class="d-flex flex-column">
               <div
-                class="mt-3 next align-self-end me-3 d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
-                id="nextStep1"
+                class="d-flex flex-column align-items-center container paneCon"
               >
-                <button class="border-0 bg-transparent text-white">
-                  Next Step
+                <div class="step">Step 1/4</div>
+                <p class="title mt-2">Valid your phone</p>
+                <form class="mt-3 w-100 formStep1">
+                  <div class="mb-3">
+                    <label for="phoneNumber" class="form-label"
+                      >Mobile Number</label
+                    >
+                    <div class="d-flex gap-3">
+                      <select class="countryCode form-select">
+                        <option data-countryCode="US" value="1" selected>
+                          + 1
+                        </option>
+                        <option data-countryCode="GB" value="44">+ 44</option>
+                        <optgroup label="Other countries">
+                          <option data-countryCode="DZ" value="213">
+                            + 213
+                          </option>
+                        </optgroup>
+                      </select>
+                      <input
+                        type="number"
+                        class="form-control phoneNumber"
+                        id="phoneNumber"
+                        aria-describedby="phoneNumber"
+                        placeholder="345 567-23-56"
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="smsCode1" class="form-label"
+                      >Code from SMS</label
+                    >
+                    <div class="d-flex gap-3">
+                      <input
+                        type="number"
+                        class="form-control smsCode"
+                        id="smsCode1"
+                        placeholder="1"
+                      />
+                      <input
+                        type="number"
+                        class="form-control smsCode"
+                        id="smsCode2"
+                        placeholder="2"
+                      />
+                      <input
+                        type="number"
+                        class="form-control smsCode"
+                        id="smsCode3"
+                        placeholder="3"
+                      />
+                      <input
+                        type="number"
+                        class="form-control smsCode"
+                        id="smsCode4"
+                        placeholder="4"
+                      />
+                    </div>
+                  </div>
+                  <div class="smsMessage p-4 d-flex gap-3 mb-3">
+                    <img src="assets/Images/info.svg" alt="info" />
+                    <p>
+                      SMS was sent to your number +1 345 673-56-67 <br />
+                      It will be valid for 01:25
+                    </p>
+                  </div>
+                  <div class="mb-3">
+                    <label for="emailInput" class="form-label"
+                      >Email Address</label
+                    >
+                    <div>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="emailInput"
+                        placeholder="youremail@gmail.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="passwordInput" class="form-label"
+                      >Create Password</label
+                    >
+                    <div class="position-relative passInputCon">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="passwordInput"
+                        placeholder="••••••••"
+                      />
+                      <img
+                        src="assets/Images/viewpassword.svg"
+                        alt="view password"
+                        onclick="changeType()"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="nextBtn mt-2 d-flex flex-column">
+                <button
+                  class="mt-3 next align-self-end me-3 d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
+                  id="nextStep1"
+                >
+                  <span> Next Step </span>
+                  <img src="assets/Images/arrow.svg" alt="arrow" />
                 </button>
-                <img src="assets/Images/arrow.svg" alt="arrow" />
               </div>
             </div>
           </div>
           <div class="tab-pane fade m-auto h-100" id="yourself">
-            <div
-              class="d-flex flex-column align-items-center container paneCon"
-            >
-              <div class="step">Step 2/4</div>
-              <p class="title mt-2">Tell about yourself</p>
-              <form class="mt-3 w-100 formStep1">
-                <div class="mb-3">
-                  <label for="services" class="form-label"
-                    >Why will you use the service?</label
-                  >
-                  <div>
-                    <select class="service form-select">
-                      <option selected>Work</option>
-                      <option>Home</option>
-                      <option>School</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="whoAreYou" class="form-label"
-                    >What describes you best?</label
-                  >
-                  <div>
-                    <select class="service form-select">
-                      <option selected>Business Owner</option>
-                      <option>Student</option>
-                    </select>
-                  </div>
-                </div>
-                <div
-                  class="mb-3 d-flex align-items-center justify-content-between"
-                >
-                  <label for="describe" class="form-label"
-                    >What describes you best?</label
-                  >
-                  <div class="d-flex align-items-center gap-4">
-                    <div class="d-flex align-items-center gap-2">
-                      <input type="radio" id="yes" name="choice" />
-                      <label for="yes">Yes</label>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                      <input type="radio" id="no" name="choice" />
-                      <label for="no">No</label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="nextBtn mt-3 d-flex flex-column">
+            <div class="d-flex flex-column h-100">
               <div
-                class="d-flex align-items-center justify-content-between mx-3 mt-3"
+                class="d-flex flex-column align-items-center container flex-grow-1 paneCon"
               >
+                <div class="step">Step 2/4</div>
+                <p class="title mt-2">Tell about yourself</p>
+                <form class="mt-3 w-100 formStep1">
+                  <div class="mb-3">
+                    <label for="services" class="form-label"
+                      >Why will you use the service?</label
+                    >
+                    <div>
+                      <select class="service form-select">
+                        <option selected>Work</option>
+                        <option>Home</option>
+                        <option>School</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="whoAreYou" class="form-label"
+                      >What describes you best?</label
+                    >
+                    <div>
+                      <select class="service form-select">
+                        <option selected>Business Owner</option>
+                        <option>Student</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-between"
+                  >
+                    <label for="describe" class="form-label"
+                      >What describes you best?</label
+                    >
+                    <div class="d-flex align-items-center gap-4">
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="radio" id="yes" name="choice" />
+                        <label for="yes">Yes</label>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="radio" id="no" name="choice" />
+                        <label for="no">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="nextBtn mt-3 d-flex flex-column">
                 <div
-                  class="prevBtn d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
-                  id="prevStep1"
+                  class="d-flex align-items-center justify-content-between mx-3 mt-3"
                 >
-                  <img src="assets/Images/prevArrow.svg" alt="prevArrow" />
-                  <button class="">Previous</button>
-                </div>
-                <div
-                  class="d-flex align-items-center justify-content-center gap-lg-3 gap-2 next btnCon"
-                  id="nextStep2"
-                >
-                  <button class="border-0 bg-transparent text-white">
-                    Next Step
+                  <button
+                    class="prevBtn d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
+                    id="prevStep1"
+                  >
+                    <img src="assets/Images/prevArrow.svg" alt="prevArrow" />
+                    <span>Previous</span>
                   </button>
-                  <img src="assets/Images/arrow.svg" alt="arrow" />
+                  <button
+                    class="d-flex align-items-center justify-content-center gap-lg-3 gap-2 next btnCon"
+                    id="nextStep2"
+                  >
+                    <span> Next Step </span>
+                    <img src="assets/Images/arrow.svg" alt="arrow" />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div class="tab-pane fade m-auto h-100" id="company">
-            <div
-              class="d-flex flex-column align-items-center container paneCon"
-            >
-              <div class="step">Step 3/4</div>
-              <p class="title mt-2">Tell about your company</p>
-              <form class="mt-3 w-100 formStep4">
-                <div class="mb-3 inputCon">
-                  <label for="companyName" class="form-label"
-                    >Your Company’s Name</label
-                  >
-                  <div>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="companyName"
-                      placeholder="Company’s Name"
-                    />
+            <div class="d-flex flex-column h-100">
+              <div
+                class="d-flex flex-column align-items-center flex-grow-1 container paneCon"
+              >
+                <div class="step">Step 3/4</div>
+                <p class="title mt-2">Tell about your company</p>
+                <form class="mt-3 w-100 formStep4">
+                  <div class="mb-3 inputCon">
+                    <label for="companyName" class="form-label"
+                      >Your Company’s Name</label
+                    >
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="companyName"
+                        placeholder="Company’s Name"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="mb-3 inputCon">
-                  <label for="companyName" class="form-label"
-                    >Business Direction</label
-                  >
-                  <select class="service form-select">
-                    <option selected>IT and programming</option>
-                    <option>option 2</option>
-                    <option>option 3</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="teamNumber" class="form-label teamNumber"
-                    >How many people in your team?</label
-                  >
-                  <div class="teamMembers">
-                    <div class="row g-3">
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="onlyMe" />
-                          <label for="onlyMe">Only me</label>
+                  <div class="mb-3 inputCon">
+                    <label for="companyName" class="form-label"
+                      >Business Direction</label
+                    >
+                    <select class="service form-select">
+                      <option selected>IT and programming</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="teamNumber" class="form-label teamNumber"
+                      >How many people in your team?</label
+                    >
+                    <div class="teamMembers">
+                      <div class="row g-3">
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="onlyMe" />
+                            <label for="onlyMe">Only me</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="choice2" />
-                          <label for="choice2">2 - 5</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="choice2" />
+                            <label for="choice2">2 - 5</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="choice3" />
-                          <label for="choice3">6 - 10</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="choice3" />
+                            <label for="choice3">6 - 10</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="choice4" />
-                          <label for="choice4">11 - 20</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="choice4" />
+                            <label for="choice4">11 - 20</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="choice5" />
-                          <label for="choice5">21 - 40</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="choice5" />
+                            <label for="choice5">21 - 40</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input
-                            type="radio"
-                            name="teamSize"
-                            id="choice6"
-                            checked
-                          />
-                          <label for="choice6">41 - 50</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input
+                              type="radio"
+                              name="teamSize"
+                              id="choice6"
+                              checked
+                            />
+                            <label for="choice6">41 - 50</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="choice7" />
-                          <label for="choice7">51 - 100</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="choice7" />
+                            <label for="choice7">51 - 100</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-6">
-                        <div class="team-btn">
-                          <input type="radio" name="teamSize" id="choice8" />
-                          <label for="choice8">101 - 500</label>
+                        <div class="col-lg-3 col-6">
+                          <div class="team-btn">
+                            <input type="radio" name="teamSize" id="choice8" />
+                            <label for="choice8">101 - 500</label>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </form>
-            </div>
-            <div class="nextBtn mt-3 d-flex flex-column">
-              <div
-                class="d-flex align-items-center justify-content-between mx-3 mt-3"
-              >
+                </form>
+              </div>
+              <div class="nextBtn mt-3 d-flex flex-column">
                 <div
-                  class="prevBtn d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
-                  id="prevStep2"
+                  class="d-flex align-items-center justify-content-between mx-3 mt-3"
                 >
-                  <img src="assets/Images/prevArrow.svg" alt="prevArrow" />
-                  <button class="border-0 bg-transparent">Previous</button>
-                </div>
-                <div
-                  class="d-flex align-items-center justify-content-center gap-lg-3 gap-2 next btnCon"
-                  id="nextStep3"
-                >
-                  <button class="border-0 bg-transparent text-white">
-                    Next Step
+                  <button
+                    class="prevBtn d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
+                    id="prevStep2"
+                  >
+                    <img src="assets/Images/prevArrow.svg" alt="prevArrow" />
+                    <span>Previous</span>
                   </button>
-                  <img src="assets/Images/arrow.svg" alt="arrow" />
+                  <button
+                    class="d-flex align-items-center justify-content-center gap-lg-3 gap-2 next btnCon"
+                    id="nextStep3"
+                  >
+                    <span> Next Step </span>
+                    <img src="assets/Images/arrow.svg" alt="arrow" />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div class="tab-pane fade m-auto h-100" id="teamMember">
-            <div
-              class="d-flex flex-column align-items-center container paneCon"
-            >
-              <div class="step">Step 4/4</div>
-              <p class="title mt-2">Invite Team Members</p>
-              <form class="mt-3 w-100 formStep1">
-                <div class="mb-3">
-                  <label for="member'sEmail" class="form-label"
-                    >Member’s Email</label
-                  >
-                  <div>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="member'sEmail"
-                      placeholder="memberemail@gmail.com"
-                    />
-                  </div>
-                  <div class="d-flex align-items-center gap-2 mt-3 prevBtn">
-                    <img src="assets/Images/blue.svg" alt="plusIcon" />
-                    <button>Add another Member</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="nextBtn mt-3 d-flex flex-column">
+            <div class="d-flex flex-column h-100">
               <div
-                class="d-flex align-items-center justify-content-between mx-3 mt-3"
+                class="d-flex flex-column align-items-center flex-grow-1 container paneCon"
               >
+                <div class="step">Step 4/4</div>
+                <p class="title mt-2">Invite Team Members</p>
+                <form class="mt-3 w-100 formStep1">
+                  <div class="mb-3">
+                    <label for="member'sEmail" class="form-label"
+                      >Member’s Email</label
+                    >
+                    <div>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="member'sEmail"
+                        placeholder="memberemail@gmail.com"
+                      />
+                    </div>
+                    <button
+                      class="d-flex align-items-center gap-2 mt-3 prevBtn"
+                    >
+                      <img src="assets/Images/blue.svg" alt="plusIcon" />
+                      <span>Add another Member</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="nextBtn mt-3 d-flex flex-column">
                 <div
-                  class="prevBtn d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
-                  id="prevStep3"
+                  class="d-flex align-items-center justify-content-between mx-3 mt-3"
                 >
-                  <img src="assets/Images/prevArrow.svg" alt="prevArrow" />
-                  <button class="border-0 bg-transparent">Previous</button>
-                </div>
-                <div
-                  class="d-flex align-items-center justify-content-center gap-lg-3 gap-2 next btnCon"
-                  id="nextStep4"
-                >
-                  <button class="bg-transparent text-white border-0">
-                    Next Step
+                  <button
+                    class="prevBtn d-flex align-items-center justify-content-center gap-lg-3 gap-2 btnCon"
+                    id="prevStep3"
+                  >
+                    <img src="assets/Images/prevArrow.svg" alt="prevArrow" />
+                    <span>Previous</span>
                   </button>
-                  <img src="assets/Images/arrow.svg" alt="arrow" />
+                  <button
+                    class="d-flex align-items-center justify-content-center gap-lg-3 gap-2 next btnCon"
+                    id="nextStep4"
+                  >
+                    <span> Next Step </span>
+                    <img src="assets/Images/arrow.svg" alt="arrow" />
+                  </button>
                 </div>
               </div>
             </div>

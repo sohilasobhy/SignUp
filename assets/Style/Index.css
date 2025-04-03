@@ -12,7 +12,7 @@
     font-size: 14px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep1 input::-moz-placeholder {
     font-size: 12px;
   }
@@ -22,7 +22,7 @@
     font-size: 12px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .tabsCon .paneCon .formStep4 .inputCon input::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep4 .inputCon select::-moz-placeholder, body .containerAll .tabsCon .paneCon .formStep1 input::-moz-placeholder {
     font-size: 10px;
   }
@@ -62,22 +62,28 @@ body .containerAll {
 }
 body .containerAll .navCon {
   background-color: #3f8cff;
-  height: 100%;
   border-radius: 24px;
 }
 @media (min-width: 992px) {
   body .containerAll .navCon {
     width: 350px;
+    height: 100%;
+    align-items: flex-start;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .navCon {
-    width: 300px;
+    align-items: flex-start;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) and (min-width: 420px) {
   body .containerAll .navCon {
-    width: 200;
+    align-items: center;
+  }
+}
+@media (max-width: 420px) {
+  body .containerAll .navCon {
+    align-items: flex-start;
   }
 }
 body .containerAll .navCon .logo {
@@ -92,14 +98,44 @@ body .containerAll .navCon .getStarted {
     font-size: 36px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .navCon .getStarted {
     font-size: 30px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .navCon .getStarted {
     font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  body .containerAll .navCon .nav-tabs {
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  body .containerAll .navCon .nav-tabs {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) and (min-width: 420px) {
+  body .containerAll .navCon .nav-tabs {
+    flex-direction: row;
+  }
+}
+@media (max-width: 420px) {
+  body .containerAll .navCon .nav-tabs {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) and (min-width: 420px) {
+  body .containerAll .navCon .nav-tabs .navItemCon {
+    flex-direction: row;
+  }
+}
+@media (max-width: 420px) {
+  body .containerAll .navCon .nav-tabs .navItemCon {
+    flex-direction: column;
   }
 }
 body .containerAll .navCon .nav-item {
@@ -112,23 +148,23 @@ body .containerAll .navCon .nav-item .nav-link {
   margin-bottom: 0 !important;
   border: 0;
   position: relative;
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
 }
 @media (min-width: 992px) {
   body .containerAll .navCon .nav-item .nav-link {
     font-size: 18px;
+    padding-left: 40px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (min-width: 768px) {
   body .containerAll .navCon .nav-item .nav-link {
     font-size: 16px;
+    padding-left: 40px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .navCon .nav-item .nav-link {
     font-size: 12px;
+    padding-left: 30px;
   }
 }
 body .containerAll .navCon .nav-item .nav-link.active {
@@ -140,23 +176,43 @@ body .containerAll .navCon .nav-item .nav-link:hover {
   border: 0;
   opacity: 1;
 }
-body .containerAll .navCon .nav-item .circle {
-  width: 25px;
+body .containerAll .navCon .nav-item .nav-link.afterLine::after {
+  content: "";
+  width: 2px;
   height: 25px;
+  background: white;
+  margin: 3px 0 3px -29px;
+}
+@media (max-width: 768px) {
+  body .containerAll .navCon .nav-item .nav-link.afterLine::after {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  body .containerAll .navCon .nav-item .nav-link.afterLine::after {
+    display: block;
+  }
+}
+body .containerAll .navCon .nav-item .circle {
   border-radius: 50%;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.3019607843);
   border: 2px solid white;
   background-color: transparent;
 }
 body .containerAll .navCon .nav-item .circle img {
   display: none;
 }
-body .containerAll .navCon .nav-item .line {
-  width: 2px;
-  height: 25px;
-  background: white;
-  margin-left: 10px;
+@media (min-width: 768px) {
+  body .containerAll .navCon .nav-item .circle {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 767px) {
+  body .containerAll .navCon .nav-item .circle {
+    width: 20px;
+    height: 20px;
+  }
 }
 body .containerAll .navCon .nav-item:has(.active) {
   opacity: 1;
@@ -174,37 +230,35 @@ body .containerAll .tabsCon {
   background-color: white;
   border-radius: 24px;
   height: 100%;
-  overflow-y: auto;
 }
 @media (min-width: 992px) {
   body .containerAll .tabsCon {
     width: calc(100% - 350px);
+    overflow-y: auto;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .tabsCon {
     width: calc(100% - 300px);
+    overflow-y: auto;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .tabsCon {
-    width: calc(100% - 200px);
+    width: 100%;
   }
-}
-body .containerAll .tabsCon .paneCon {
-  height: 88%;
 }
 @media (min-width: 992px) {
   body .containerAll .tabsCon .paneCon {
     width: 425px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .tabsCon .paneCon {
     width: 300px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .tabsCon .paneCon {
     width: 100%;
   }
@@ -223,12 +277,12 @@ body .containerAll .tabsCon .paneCon .title {
     font-size: 22px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .tabsCon .paneCon .title {
     font-size: 19px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .tabsCon .paneCon .title {
     font-size: 16px;
   }
@@ -268,12 +322,12 @@ body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
     width: 75px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
     width: 70px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .tabsCon .paneCon .formStep1 .countryCode {
     width: 65px;
   }
@@ -315,13 +369,13 @@ body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
     height: 50px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
+@media (max-width: 992px) and (min-width: 768px) {
   body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
     width: 50px;
     height: 45px;
   }
 }
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   body .containerAll .tabsCon .paneCon .formStep1 input.smsCode {
     width: 40px;
     height: 40px;
@@ -407,7 +461,6 @@ body .containerAll .team-btn:hover label {
 body .containerAll .nextBtn {
   width: 100%;
   border-top: 1px solid #d8e0f0;
-  cursor: pointer;
 }
 body .containerAll .nextBtn .btnCon {
   padding: 0.7rem 1.5rem;
@@ -416,31 +469,30 @@ body .containerAll .nextBtn .next {
   box-shadow: 0px 6px 12px 0px rgba(63, 140, 255, 0.262745098);
   border-radius: 14px;
   background-color: #3f8cff;
-}
-body .containerAll .nextBtn .next button {
   border: 0;
+  color: white;
   color: white;
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  body .containerAll .nextBtn .next button {
+  body .containerAll .nextBtn .next {
     font-size: 16px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .nextBtn .next button {
+@media (max-width: 992px) and (min-width: 768px) {
+  body .containerAll .nextBtn .next {
     font-size: 14px;
   }
 }
-@media (max-width: 786px) {
-  body .containerAll .nextBtn .next button {
+@media (max-width: 767px) {
+  body .containerAll .nextBtn .next {
     font-size: 12px;
   }
 }
-body .containerAll .prevBtn {
-  cursor: pointer;
+body .containerAll .nextBtn .next button {
+  border: 0;
 }
-body .containerAll .prevBtn button {
+body .containerAll .prevBtn {
   background-color: transparent;
   border-radius: 14px;
   border: 0;
@@ -449,17 +501,17 @@ body .containerAll .prevBtn button {
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  body .containerAll .prevBtn button {
+  body .containerAll .prevBtn {
     font-size: 16px;
   }
 }
-@media (max-width: 992px) and (min-width: 786px) {
-  body .containerAll .prevBtn button {
+@media (max-width: 992px) and (min-width: 768px) {
+  body .containerAll .prevBtn {
     font-size: 14px;
   }
 }
-@media (max-width: 786px) {
-  body .containerAll .prevBtn button {
+@media (max-width: 767px) {
+  body .containerAll .prevBtn {
     font-size: 10px;
   }
 }
