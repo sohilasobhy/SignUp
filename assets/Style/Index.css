@@ -71,21 +71,6 @@ body .containerAll .navCon {
     align-items: flex-start;
   }
 }
-@media (max-width: 992px) and (min-width: 768px) {
-  body .containerAll .navCon {
-    align-items: flex-start;
-  }
-}
-@media (max-width: 767px) and (min-width: 420px) {
-  body .containerAll .navCon {
-    align-items: center;
-  }
-}
-@media (max-width: 420px) {
-  body .containerAll .navCon {
-    align-items: flex-start;
-  }
-}
 body .containerAll .navCon .logo {
   width: 50px;
 }
@@ -108,38 +93,9 @@ body .containerAll .navCon .getStarted {
     font-size: 24px;
   }
 }
-@media (min-width: 992px) {
-  body .containerAll .navCon .nav-tabs {
-    flex-direction: column;
-  }
-}
-@media (max-width: 992px) and (min-width: 768px) {
-  body .containerAll .navCon .nav-tabs {
-    flex-direction: column;
-  }
-}
-@media (max-width: 767px) and (min-width: 420px) {
-  body .containerAll .navCon .nav-tabs {
-    flex-direction: row;
-  }
-}
-@media (max-width: 420px) {
-  body .containerAll .navCon .nav-tabs {
-    flex-direction: column;
-  }
-}
-@media (max-width: 767px) and (min-width: 420px) {
-  body .containerAll .navCon .nav-tabs .navItemCon {
-    flex-direction: row;
-  }
-}
-@media (max-width: 420px) {
-  body .containerAll .navCon .nav-tabs .navItemCon {
-    flex-direction: column;
-  }
-}
 body .containerAll .navCon .nav-item {
   opacity: 0.5;
+  position: relative;
 }
 body .containerAll .navCon .nav-item .nav-link {
   color: #ffffff !important;
@@ -164,7 +120,6 @@ body .containerAll .navCon .nav-item .nav-link {
 @media (max-width: 767px) {
   body .containerAll .navCon .nav-item .nav-link {
     font-size: 12px;
-    padding-left: 30px;
   }
 }
 body .containerAll .navCon .nav-item .nav-link.active {
@@ -195,7 +150,6 @@ body .containerAll .navCon .nav-item .nav-link.afterLine::after {
 }
 body .containerAll .navCon .nav-item .circle {
   border-radius: 50%;
-  position: absolute;
   border: 2px solid white;
   background-color: transparent;
 }
@@ -204,6 +158,9 @@ body .containerAll .navCon .nav-item .circle img {
 }
 @media (min-width: 768px) {
   body .containerAll .navCon .nav-item .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 25px;
     height: 25px;
   }
@@ -462,15 +419,13 @@ body .containerAll .nextBtn {
   width: 100%;
   border-top: 1px solid #d8e0f0;
 }
-body .containerAll .nextBtn .btnCon {
-  padding: 0.7rem 1.5rem;
-}
 body .containerAll .nextBtn .next {
   box-shadow: 0px 6px 12px 0px rgba(63, 140, 255, 0.262745098);
   border-radius: 14px;
   background-color: #3f8cff;
   border: 0;
   color: white;
+  padding: 0.7rem 1.5rem;
   color: white;
   font-weight: 700;
 }

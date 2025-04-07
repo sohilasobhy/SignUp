@@ -45,15 +45,6 @@ body {
         height: 100%;
         align-items: flex-start;
       }
-      @media (max-width: 992px) and (min-width: 768px) {
-        align-items: flex-start;
-      }
-      @media (max-width: 767px) and (min-width: 420px) {
-        align-items: center;
-      }
-      @media (max-width: 420px) {
-        align-items: flex-start;
-      }
       background-color: $primary-color;
       border-radius: 24px;
       .logo {
@@ -71,30 +62,9 @@ body {
           font-size: 24px;
         }
       }
-      .nav-tabs {
-        @media (min-width: 992px) {
-          flex-direction: column;
-        }
-        @media (max-width: 992px) and (min-width: 768px) {
-          flex-direction: column;
-        }
-        @media (max-width: 767px) and (min-width: 420px) {
-          flex-direction: row;
-        }
-        @media (max-width: 420px) {
-          flex-direction: column;
-        }
-        .navItemCon {
-          @media (max-width: 767px) and (min-width: 420px) {
-            flex-direction: row;
-          }
-          @media (max-width: 420px) {
-            flex-direction: column;
-          }
-        }
-      }
       .nav-item {
         opacity: 0.5;
+        position: relative;
         .nav-link {
           @include text-style(#ffffff !important, null, 600);
           @media (min-width: 992px) {
@@ -107,13 +77,11 @@ body {
           }
           @media (max-width: 767px) {
             font-size: 12px;
-            padding-left: 30px;
           }
           padding: 0;
           margin-bottom: 0 !important;
           border: 0;
           position: relative;
-
           &.active {
             opacity: 1;
             background-color: transparent;
@@ -141,13 +109,13 @@ body {
         }
         .circle {
           border-radius: 50%;
-          position: absolute;
           border: 2px solid white;
           background-color: transparent;
           img {
             display: none;
           }
           @media (min-width: 768px) {
+            @include position(absolute, 0, null, null, 0);
             width: 25px;
             height: 25px;
           }
@@ -369,15 +337,14 @@ body {
     .nextBtn {
       width: 100%;
       border-top: 1px solid $border-color;
-      .btnCon {
-        padding: 0.7rem 1.5rem;
-      }
       .next {
         box-shadow: 0px 6px 12px 0px #3f8cff43;
         border-radius: 14px;
         background-color: $primary-color;
         border: 0;
         color: white;
+        padding: 0.7rem 1.5rem;
+
         @include text-style(white, null, 700);
         @media (min-width: 992px) {
           font-size: 16px;
