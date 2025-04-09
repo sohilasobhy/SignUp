@@ -131,21 +131,29 @@ body .containerAll .navCon .nav-item .nav-link:hover {
   border: 0;
   opacity: 1;
 }
+body .containerAll .navCon .nav-item .nav-link.afterLine {
+  position: relative;
+}
 body .containerAll .navCon .nav-item .nav-link.afterLine::after {
   content: "";
-  width: 2px;
-  height: 25px;
   background: white;
-  margin: 3px 0 3px -29px;
+  display: block;
 }
-@media (max-width: 768px) {
+@media (width <= 768px) {
   body .containerAll .navCon .nav-item .nav-link.afterLine::after {
-    display: none;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    transform: scaleX(170%);
+    top: -57%;
+    left: 35px;
   }
 }
 @media (min-width: 768px) {
   body .containerAll .navCon .nav-item .nav-link.afterLine::after {
-    display: block;
+    width: 2px;
+    height: 25px;
+    margin: 3px 0 3px -29px;
   }
 }
 body .containerAll .navCon .nav-item .circle {
@@ -244,7 +252,7 @@ body .containerAll .tabsCon .paneCon .title {
     font-size: 16px;
   }
 }
-body .containerAll .tabsCon .paneCon .formStep1 input::-webkit-outer-spin-button,
+body .containerAll .tabsCon .paneCon .formStep1 in put::-webkit-outer-spin-button,
 body .containerAll .tabsCon .paneCon .formStep1 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -452,7 +460,6 @@ body .containerAll .prevBtn {
   border-radius: 14px;
   border: 0;
   color: #3f8cff;
-  font-size: 16px;
   font-weight: 700;
 }
 @media (min-width: 992px) {
@@ -467,7 +474,7 @@ body .containerAll .prevBtn {
 }
 @media (max-width: 767px) {
   body .containerAll .prevBtn {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 body .success {

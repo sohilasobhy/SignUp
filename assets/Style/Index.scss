@@ -92,17 +92,23 @@ body {
             opacity: 1;
           }
           &.afterLine {
+            position: relative;
             &::after {
               content: "";
-              width: 2px;
-              height: 25px;
               background: white;
-              margin: 3px 0 3px -29px;
-              @media (max-width: 768px) {
-                display: none;
+              display: block;
+              @media (width <= 768px) {
+                position: absolute;
+                height: 2px;
+                width: 50%;
+                transform: scaleX(170%);
+                top: -57%;
+                left: 35px;
               }
               @media (min-width: 768px) {
-                display: block;
+                width: 2px;
+                height: 25px;
+                margin: 3px 0 3px -29px;
               }
             }
           }
@@ -179,7 +185,7 @@ body {
           }
         }
         .formStep1 {
-          input::-webkit-outer-spin-button,
+          in put::-webkit-outer-spin-button,
           input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
@@ -364,7 +370,7 @@ body {
       background-color: transparent;
       border-radius: 14px;
       border: 0;
-      @include text-style($primary-color, 16px, 700);
+      @include text-style($primary-color, null, 700);
       @media (min-width: 992px) {
         font-size: 16px;
       }
@@ -372,7 +378,7 @@ body {
         font-size: 14px;
       }
       @media (max-width: 767px) {
-        font-size: 10px;
+        font-size: 12px;
       }
     }
   }
